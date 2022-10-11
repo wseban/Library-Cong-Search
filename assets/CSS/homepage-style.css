@@ -1,0 +1,22 @@
+* {
+    color: white;
+}
+
+.bg {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    width: 100vw;
+    height: 100vh;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    height: 20vh;
+}
+
+.main-body {
+    text-decoration: none;
+    font-size: 40px;
+}
