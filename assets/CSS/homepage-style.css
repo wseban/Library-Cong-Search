@@ -20,3 +20,48 @@
     text-decoration: none;
     font-size: 40px;
 }
+
+#ak-icon:hover {
+    width: 220px;
+    transition: 1s;
+    opacity: 70%;
+}
+
+#ca-icon:hover {
+    width: 320px;
+    transition: 1s;
+    opacity: 70%;
+}
+
+#hws-icon:hover {
+    width: 320px;
+    transition: 1s;
+    opacity: 70%;
+}
+
+#mk-icon:hover {
+    width: 320px;
+    transition: 1s;
+    opacity: 70%;
+}
+
+#dl-icon:hover {
+    width: 340px;
+    transition: 1s;
+    opacity: 70%;
+}
+
+#ec-icon:hover {
+    width: 270px;
+    transition: 1s;
+    opacity: 70%;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section a {
+    padding: 60px;
+}
