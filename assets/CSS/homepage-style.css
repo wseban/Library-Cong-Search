@@ -95,3 +95,16 @@ section {
 section a {
     padding: 60px;
 }
+
+@font-face {
+    src: url(./NewWaltDisneyUi-8YdA.ttf);
+    font-family: walter;
+}
+
+h1 {
+    font-family: walter;
+}
+
+p {
+    font-family: walter;
+}
