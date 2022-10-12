@@ -1,3 +1,13 @@
+@font-face {
+    src: url(./NewWaltDisneyUi-8YdA.ttf);
+    font-family: walter;
+}
+
+* {
+    font-family: walter;
+    box-sizing: border-box;
+}
+
 .bg {
     display: flex;
     justify-content: center;
@@ -7,15 +17,36 @@
 }
 
 #navbar {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
     background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
     height: 20vh;
+    font-size: 50px;
 }
+
 
 
 #map {
     margin-top: 80px;
 }
+
+#ak {
+    margin-left: -180px;
+    color: yellow;
+}
+
+#home {
+    color: white;
+}
+
+#home:hover {
+    color: blue;
+    transition: .5s;
+}
+
+
+
+
+
 
