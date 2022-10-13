@@ -63,10 +63,14 @@ body {
   
 }
 
-.images {
+.images{
     display: flex;
     justify-content: center;
-    max-height: 50vh;
+}
+
+.images img {
+    width: 550px;
+    height: 350px;
 }
 
 
