@@ -28,19 +28,38 @@ fetch(getTitles)
     var movies = data['data'][0]['films']
     var shows = data['data'][0]['tvShows']
 
-    displayCharName.innerHTML = charName
-    displayCharimage.innerHTML = image
-    displayMovieTitles.innerHTML = movies
-    displayShowTitles.innerHTML = shows
+    for(var i = 0; i < shows.length; i++){
+        var showList = document.createElement("ul")
+        var showLink = document.createElement("a")
+        showLink.textContent = shows[i]
+        showLink.setAttribute("href", listShowLinks())
+        showList.appendChild(showLink)
+        displayShowTitles.append(showList)
+        console.log("hello")
+    }
+    for(var i = 0; i < movies.length; i++){
+        var movieList = document.createElement("ul")
+        var movieLink = document.createElement("a")
+        movieLink.textContent = movies[i]
+        movieLink.setAttribute("href", listMovieLinks())
+        movieList.appendChild(movieLink)
+        displayMovieTitles.append(movieList)
+        console.log("hello")}
+    //displayCharName.innerHTML = charName
+    //displayCharimage.innerHTML = image
+   // displayMovieTitles.innerHTML = movies
+    //displayShowTitles.innerHTML = shows
+    
 })  
-
 
 }
 // to be called after user clicks a title they want to see more info on.
 /* function renderPlatforms() {
-
-
-
 var getPlatforms = "https://api.watchmode.com/v1/autocomplete-search/?apiKey=4geqQK1CQGBP4icGVsqsLn9aqaMb0cjhUXs79A9V&search_field=name&search_value=" + titleName + "&search_type=1";
-
 } */
+function listShowLinks(){
+    console.log("poopshows")
+}
+function listMovieLinks(){
+    console.log("pooopmovies")
+}
