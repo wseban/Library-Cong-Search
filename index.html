@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mouse Base</title>
+    <title>Mickey n Friends Finder</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <link rel="stylesheet" href="./assets/CSS/homepage-style.css" />
@@ -20,7 +20,7 @@
 </header>
 
 <main class="welcome">
-  <h1>Mouse Base!</h1>
+  <h1>Mickey n Friends Finder!</h1>
   <p>Ever wondered what films and shows your favorite Disney Characters appear in? And where to watch said films and shows? Look no further, Mouse Base is here to provide all this information in one place. Get started by typing in any Disney character!</p>
 </main>
 
@@ -30,12 +30,29 @@
   <div class="slideshow-container">
     <!-- images -->
     <div class="images">
-      <img class="mySlides" src="./assets/images/mickeyfriends.jpeg" style="width:80vh">
-      <img class="mySlides" src="./assets/images/pets.jpeg" style="width:80vh">
-      <img class="mySlides" src="./assets/images/princesses.webp" style="width:80vh">
-      <img class="mySlides" src="./assets/images/villans.webp" style="width:80vh">
+      <img class="mySlides" src="./assets/images/mickeyfriends.jpeg">
+      <img class="mySlides" src="./assets/images/pets.jpeg">
+      <img class="mySlides" src="./assets/images/princesses.webp">
+      <img class="mySlides" src="./assets/images/villans.webp">
     </div>
   </div>
+
+  <div class="bg">
+    
+    <input id="search-bar">
+    <button onclick="renderInput()">Search</button>
+    
+    <div id="char-name"></div>
+    <br><br><br>
+    <div id="char-image"></div>
+    <br><br><br>
+    <div id="shows"></div>
+    <br><br><br>
+    <div id="movies"></div>
+    
+  </div>
+
   <script src="./assets/JS/script.js"></script>
+  <script src="./assets/JS/searchpage.js"></script>
   </body>
 </html>
