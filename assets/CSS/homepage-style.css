@@ -1,6 +1,5 @@
 * {
     color: white;
-    display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     padding: 0%;
@@ -20,16 +19,19 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 30vw;
+    height: 25vw;
     background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
 }
 
 .welcome h1 {
     text-align: center;
-    font-size: 71px;
+    font-size: 70px;
 }
 
+body {
 
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
 
 
 #navbar {
@@ -56,136 +58,28 @@
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
-  position: relative;
+  align-items: center;
   margin: auto;
+  
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-
-
-#ak-icon:hover {
-    width: 220px;
-    transition: 1s;
-    opacity: 70%;
-}
-
-#ca-icon:hover {
-    width: 320px;
-    transition: 1s;
-    opacity: 70%;
-}
-
-#hws-icon:hover {
-    width: 320px;
-    transition: 1s;
-    opacity: 70%;
-}
-
-#mk-icon:hover {
-    width: 320px;
-    transition: 1s;
-    opacity: 70%;
-}
-
-#dl-icon:hover {
-    width: 340px;
-    transition: 1s;
-    opacity: 70%;
-}
-
-#ec-icon:hover {
-    width: 270px;
-    transition: 1s;
-    opacity: 70%;
-}
-
-section {
+.images {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    max-height: 50vh;
+}
+
+.buttons {
+    display: flex;
     justify-content: center;
 }
-section a {
-    padding: 60px;
-}
 
+.w3-buttons {
+    color:#182848;
+    font-size: 15px;
+}
+/*//////////////////
+*/
 @font-face {
     src: url(./NewWaltDisneyUi-8YdA.ttf);
     font-family: walter;
@@ -197,4 +91,6 @@ h1 {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 50vw;
 }
