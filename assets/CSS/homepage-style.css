@@ -6,8 +6,8 @@
 }
 
 .bg {
-    padding-top: 40px;
-    padding-left: 100px;    
+    /* padding-top: 40px;
+    padding-left: 100px;     */
     width: 100vw;
     height: 100vw;
     background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
@@ -20,36 +20,17 @@
     align-items: center;
     width: 100vw;
     height: 25vw;
-    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
 }
 
 .welcome h1 {
     text-align: center;
-    font-size: 70px;
+    font-size: 8vw;
 }
 
 body {
-
     background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
 }
 
-
-#navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
-    height: 20vh;
-}
-
-.column a {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.column p {
-    color: white;
-}
 
 /*//////////////////////
 /* SLIDESHOW SECTION* /
@@ -57,10 +38,8 @@ body {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  align-items: center;
-  margin: auto;
-  
+  display: flex;
+  justify-content: center;
 }
 
 .images{
@@ -69,8 +48,8 @@ body {
 }
 
 .images img {
-    width: 550px;
-    height: 350px;
+    width: 50vw;
+    height: 30vw;
 }
 
 
@@ -83,10 +62,68 @@ body {
 
 h1 {
     font-family: walter;
+    font-size: 48px;
 }
 
 p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     width: 50vw;
+    color: yellow;
 }
+
+a {
+    color: yellow;
+}
+
+
+/* HEADER */
+#logo{
+    display: flex;
+    justify-content: center;
+}
+
+#logo img{
+    width: 10vw;
+
+}
+
+header {
+    width: 100vw;
+}
+
+h2{
+    color: yellow;
+}
+
+#search-bar{
+    font-size: 20px;
+    color: blue;
+    max-width: 25%;
+}
+
+#search-button{
+    font-size: 20px;
+    color: yellow;
+background-image: linear-gradient(to right, #005C97 0%, #363795  51%, #005C97  100%);
+max-width: 15%;
+
+}
+
+.search-center{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-column { 
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    #logo, p {
+      display: none;
+    }
+  }
