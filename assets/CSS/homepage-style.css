@@ -1,7 +1,7 @@
 * {
     color: white;
-    display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
     padding: 0%;
 }
 
@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 30vw;
+    height: 25vw;
     background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
 }
 
@@ -28,7 +28,10 @@
     font-size: 70px;
 }
 
+body {
 
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
 
 
 #navbar {
@@ -48,55 +51,35 @@
     color: white;
 }
 
+/*//////////////////////
+/* SLIDESHOW SECTION* /
+//////////////////////*           
 
-
-
-
-#ak-icon:hover {
-    width: 220px;
-    transition: 1s;
-    opacity: 70%;
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  align-items: center;
+  margin: auto;
+  
 }
 
-#ca-icon:hover {
-    width: 320px;
-    transition: 1s;
-    opacity: 70%;
-}
-
-#hws-icon:hover {
-    width: 320px;
-    transition: 1s;
-    opacity: 70%;
-}
-
-#mk-icon:hover {
-    width: 320px;
-    transition: 1s;
-    opacity: 70%;
-}
-
-#dl-icon:hover {
-    width: 340px;
-    transition: 1s;
-    opacity: 70%;
-}
-
-#ec-icon:hover {
-    width: 270px;
-    transition: 1s;
-    opacity: 70%;
-}
-
-section {
+.images {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    max-height: 50vh;
+}
+
+.buttons {
+    display: flex;
     justify-content: center;
 }
-section a {
-    padding: 60px;
-}
 
+.w3-buttons {
+    color:#182848;
+    font-size: 15px;
+}
+/*//////////////////
+*/
 @font-face {
     src: url(./NewWaltDisneyUi-8YdA.ttf);
     font-family: walter;
@@ -108,4 +91,6 @@ h1 {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 50vw;
 }
