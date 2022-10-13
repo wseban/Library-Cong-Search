@@ -1,5 +1,56 @@
+@font-face {
+    src: url(./NewWaltDisneyUi-8YdA.ttf);
+    font-family: walter;
+}
+
+* {
+    font-family: walter;
+    box-sizing: border-box;
+}
+
 .bg {
     background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
     width: 100vw;
     height: 100vh;
+}
+
+#navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    height: 20vh;
+    font-size: 50px;
+}
+
+#ec {
+    /* margin-left: -100px; */
+    color: yellow;
+    display: flex;
+    font-size: 75px;
+}
+
+
+#home {
+    color: white;
+    font-size: 50px;
+}
+
+#home:hover {
+    color: yellow;
+    transition: .5s;
+}
+
+#logo {
+/* margin-right: -180px; */
+display: flex;
+overflow: hidden;
+}
+
+@media screen and (max-width: 690px) {
+    #logo {display:none;}
+}
+
+@media screen and (max-width: 560px) {
+    #ec {display:none;}
 }
