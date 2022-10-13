@@ -69,15 +69,7 @@ body {
     max-height: 50vh;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-}
 
-.w3-buttons {
-    color:#182848;
-    font-size: 15px;
-}
 /*//////////////////
 */
 @font-face {
