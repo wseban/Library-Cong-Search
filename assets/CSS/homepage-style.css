@@ -72,6 +72,7 @@ body {
 
 h1 {
     font-family: walter;
+    font-size: 48px;
 }
 
 p {
@@ -95,4 +96,28 @@ a {
 
 header {
     width: 100vw;
+}
+
+h2{
+    color: yellow;
+}
+
+#search-bar{
+    font-size: 20px;
+    color: blue;
+    max-width: 25%;
+}
+
+#search-button{
+    font-size: 20px;
+    color: yellow;
+background-image: linear-gradient(to right, #005C97 0%, #363795  51%, #005C97  100%);
+max-width: 15%;
+
+}
+
+.search-center{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }

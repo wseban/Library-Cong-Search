@@ -44,16 +44,24 @@
     </div>
 
     <div class="bg">
+      <div class="search-center">
       <input id="search-bar" />
-      <button onclick="renderInput()">Search</button>
+      <br />
+      <button id="search-button" onclick="renderInput()">Search</button>
+      </div>
 
       <div id="char-name"></div>
       <br /><br /><br />
-      <div id="char-image"></div>
-      <br /><br /><br />
-      <div id="shows"></div>
-      <br /><br /><br />
-      <div id="movies"></div>
+      <div class="columns">
+        <div class="column">
+          <h1>TV Shows</h1>
+          <div id="shows"></div>
+        </div>
+        <div class="column">
+          <h1>Movies</h1>
+          <div id="movies"></div>
+        </div>
+      </div>
     </div>
 
     <script src="./assets/JS/script.js"></script>
