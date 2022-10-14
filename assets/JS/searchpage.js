@@ -7,10 +7,9 @@ var displayShowTitles = document.getElementById('shows')
 var displayCharImage = document.getElementById('char-image')
 var displayStreamedMovies = document.getElementById('streamed-movies')
 var displayStreamedShows = document.getElementById('streamed-shows')
+var array = ['0', '1', '2']
 
-
-
-
+var characterArray = ['cheshire cat', 'maleficent', 'lightning', 'Aladdin', 'abu', 'abigail', 'akela', 'alice', 'amelia', 'amos', 'anna', 'antonio', 'apollo', 'ariel', 'arthur', 'aurora', 'bagheera', 'balloo', 'bambi', 'bashful', 'beast', 'beaver', 'belle', 'ben', 'berlioz', 'bert', 'bolt', 'bruce', 'bruno', 'captain hook', 'chad', 'charles', 'charlotte', 'chernabog', 'chief', 'christopher robin', 'chuck','cinderella', 'claude frollo', 'clayton', 'cleo', 'coco', 'cody', 'cogsworth', 'cookie', 'copper', 'cruella de vil', 'daisy duck', 'dewey', 'dinah', 'doc', 'dodger', 'donald duck', 'dopey', 'duchess', 'duke', 'dumbo', 'eeyore', 'elliott', 'elsa', 'esmeralda', 'eudora', 'evie', 'fa zhou', 'felix', 'figaro', 'finnick', 'flit', 'flounder', 'flower', 'gaston', 'genie', 'george banks', 'geppetto', 'giselle', 'goofy', 'grumpy', 'hans', 'happy', 'hector', 'hercules', 'horace', 'iago', 'jack', 'james', 'jane', 'jane banks', 'jasmine', 'jasper', 'jim hawkins', 'jiminy cricket', 'jimmy', 'john smith', 'judy', 'kaa', 'kala', 'kanga', 'kessie', 'kristoff', 'kuzco', 'lady', 'lady kluck', 'li shang', 'louis', 'lucky', 'luisa', 'lumiere', 'mal', 'mary poppins', 'maurice', 'maui', 'max', 'meeko', 'megara', 'mickey mouse', 'michael banks', 'minnie mouse', 'moana', 'mowgli', 'mrs. potts', 'mufasa', 'mushu', 'nala', 'nana', 'naveen', 'nemo', 'nora', 'nora', 'oliver', 'oaken', 'olaf', 'pacha', 'pascal', 'patch', 'pegasus', 'peter pan', 'perdita', 'piglet', 'pluto', 'pocahontas', 'pongo', 'prince charming', 'prince eric', 'prudence', 'pua', 'pumbaa', 'quasimodo', 'rafiki', 'rajah', 'rapunzel', 'raya', 'rex', 'rolly', 'roo', 'sally', 'samba', 'sarafina', 'scar', 'scuttle', 'sebastian', 'shere khan', 'sid', 'simba', 'sleepy', 'slink', 'sneezy', 'snow white', 'stella', 'stitch', 'sven', 'thumper', 'tiana', 'tigger', 'timon', 'timothy q. mouse', 'tinker bell', 'triton', 'ursula', 'wendy', 'white rabbit', 'woody', 'yzma']
 
 var inputClick = document.getElementById('search-bar')
 inputClick = document.addEventListener("click", renderInput);
@@ -135,4 +134,24 @@ mouseHoverAnimation = () => {
     })
 }
 
-button.addEventListener('mouseover', mouseHoverAnimation)
+// button.addEventListener('mouseover', mouseHoverAnimation)
+
+// var button = document.getElementById('search-button');
+
+// mouseHoverAnimation = () => {
+//     anime({
+//         targets: button,
+//         width: '100%',
+//         scale: {
+//             delay: 2,
+//             value: 1.5
+//         },
+//         duration: 3000,
+//     })
+// }
+
+// button.addEventListener('mouseenter', mouseHoverAnimation)
+
+// //mouseleave function to reverse
+// //change scale value to 1.0
+// //eventListener with mouseleave
