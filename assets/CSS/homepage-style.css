@@ -42,11 +42,13 @@ body {
 .slideshow-container {
   display: flex;
   justify-content: center;
+  
 }
 
 .images{
     display: flex;
     justify-content: center;
+    border: 1px dotted lightgoldenrodyellow;
 }
 
 .images img {
