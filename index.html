@@ -7,7 +7,6 @@
     <title>Mickey n' Friends Finder</title>
     <link rel="stylesheet" href="/assets/CSS/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;1,400;1,700&family=Cabin:wght@400;500;600;700&family=Prompt:wght@100;200;300;400&family=Raleway:wght@300;400&family=Roboto:ital,wght@0,100;0,400;1,100&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
@@ -44,9 +43,10 @@
 
     <div class="bg">
       <div class="search-center">
-        <input id="search-bar"/>
+        <input id="search-bar"/></input>
         <br/>
-        <a href="#char-display"><button id="search-button">Search</a>
+        <button id="search-button">Search
+        <a href="#char-display"></a>
      </div>
 
     <div id="char-display"> <!-- push users view to this part of page -->
@@ -69,17 +69,11 @@
       <h3 id="back-top"><a href="#logo"><button>Back to Search</a></h3>
 
       <div id="streamed-movies"></div>
-      <div id="streamed-shows"></div>
-      
-       
-    </div>
+   <div id="streamed-shows"></div> 
+    </div> 
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="./assets/JS/modal.js"></script>
     <script src="./assets/JS/script.js"></script>
     <script src="./assets/JS/searchpage.js"></script>
-    
-      
-    </div>
   </body>
 </html>

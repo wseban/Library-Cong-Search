@@ -12,8 +12,8 @@ var displayStreamedShows = document.getElementById('streamed-shows')
 
 
 
-var inputClick = document.getElementById('search-bar')
-inputClick = document.addEventListener("click", renderInput);
+var inputClick = document.getElementById('search-button')
+inputClick.addEventListener("click", renderInput);
 
 
 var inputEnter = document.getElementById("search-bar");
@@ -64,8 +64,8 @@ fetch(getTitles)
         showList.appendChild(showListItem)
         showListItem.appendChild(showLink)
         showLink.setAttribute("id", i)
-        var listenLink = document.getElementById(i);
-        listenLink.addEventListener("click", renderPlatforms);
+        //var listenLink = document.getElementById(i);
+        //listenLink.addEventListener("click", renderPlatforms);
 
     }
 
@@ -103,22 +103,6 @@ function listMovieLinks(){
 
 }
 
-
-
-
-var inputClick = document.getElementById('search-bar')
-inputClick = document.addEventListener("click", renderInput);
-
-
-var inputEnter = document.getElementById("search-bar");
-inputEnter.addEventListener("keypress", function(event) {
-
-  if (event.key === "Enter") {
-    event.preventDefault();
-    renderInput()
-  }
-
-});
 
 
 var button = document.getElementById('search-button');
