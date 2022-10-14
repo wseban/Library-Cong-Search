@@ -5,7 +5,26 @@ var displayCharName = document.getElementById('char-name')
 var displayMovieTitles = document.getElementById('movies')
 var displayShowTitles = document.getElementById('shows')
 var displayCharImage = document.getElementById('char-image')
+var displayStreamedMovies = document.getElementById('streamed-movies')
+var displayStreamedShows = document.getElementById('streamed-shows')
 
+
+
+
+
+var inputClick = document.getElementById('search-bar')
+inputClick = document.addEventListener("click", renderInput);
+
+
+var inputEnter = document.getElementById("search-bar");
+inputEnter.addEventListener("keypress", function(event) {
+
+  if (event.key === "Enter") {
+    event.preventDefault();
+    renderInput()
+  }
+
+});
 
 
 function renderInput () {
@@ -23,6 +42,7 @@ var getTitles = "https://api.disneyapi.dev/character?name=" + charName;
 fetch(getTitles)
 .then(response => response.json())
 .then(data => {
+    
     var movies = data['data'][0]['films']
     var shows = data['data'][0]['tvShows']
     var charName = data['data'][0]['name']
@@ -44,6 +64,9 @@ fetch(getTitles)
         showList.appendChild(showListItem)
         showListItem.appendChild(showLink)
         showLink.setAttribute("id", i)
+        var listenLink = document.getElementById(i);
+        listenLink.addEventListener("click", renderPlatforms);
+
     }
 
     for(var i = 0; i < movies.length; i++){
@@ -57,6 +80,17 @@ fetch(getTitles)
 
 }
 
+
+// http://www.omdbapi.com/?i=tt3896198&apikey=61416bd7
+
+
+function renderPlatforms() {
+   
+    fetch('http://www.omdbapi.com/?t=The%20Mickey%20Mouse%20Club&apikey=61416bd7')
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+}
 
 
 
@@ -86,13 +120,6 @@ inputEnter.addEventListener("keypress", function(event) {
 
 });
 
-
-
-
-function renderPlatforms() {
-    console.log("hello")
-/* var getPlatforms = "https://api.watchmode.com/v1/autocomplete-search/?apiKey=4geqQK1CQGBP4icGVsqsLn9aqaMb0cjhUXs79A9V&search_field=name&search_value=" + titleName + "&search_type=1"; */
-}
 
 var button = document.getElementById('search-button');
 
