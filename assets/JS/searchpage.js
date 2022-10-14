@@ -195,3 +195,32 @@ mouseHoverAnimation = () => {
 button.addEventListener('mouseleave', mouseHoverAnimation)
 
 
+var buttonTop = document.getElementById('back-top')
+
+mouseHoverAnimation = () => {
+    anime({
+        targets: buttonTop,
+        width: '100%',
+        scale: {
+            delay: 2,
+            value: 1.5
+        },
+        duration: 3000,
+    })
+}
+
+buttonTop.addEventListener('mouseenter', mouseHoverAnimation)
+
+mouseHoverAnimation = () => {
+    anime({
+        targets: buttonTop,
+        width: '100%',
+        scale: {
+            delay: 2,
+            value: 1.0
+        },
+        duration: 3000,
+    })
+}
+
+buttonTop.addEventListener('mouseleave', mouseHoverAnimation)
