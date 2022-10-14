@@ -44,6 +44,9 @@ fetch(getTitles)
         showList.appendChild(showListItem)
         showListItem.appendChild(showLink)
         showLink.setAttribute("id", i)
+        var listenLink = document.getElementById(i);
+        listenLink.addEventListener("click", listShowLinks);
+
     }
 
     for(var i = 0; i < movies.length; i++){
@@ -60,9 +63,10 @@ fetch(getTitles)
 
 
 
-function listShowLinks(event){
+function listShowLinks()
+{
     //
-    console.log(event)
+    console.log("hello")
 }
 function listMovieLinks(){
     movieLink.setAttribute("onClick", renderPlatforms())
