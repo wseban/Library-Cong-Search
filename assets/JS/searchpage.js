@@ -158,18 +158,10 @@ function renderInfo(event) {
 
 }
 
+//getting the 'search-button' element by id allows you to target which button will animate
+//for the user when they interact with it. when the mouse hovers aboves the button it will
+//increase the width at the speed listed. 
 
-
-
-
-
-
-
-
-
-
-
-/*  // Anime - functionality 
 var button = document.getElementById('search-button');
 
 mouseHoverAnimation = () => {
@@ -184,4 +176,51 @@ mouseHoverAnimation = () => {
     })
 }
 
-button.addEventListener('mouseover', mouseHoverAnimation)  */
+button.addEventListener('mouseenter', mouseHoverAnimation)
+
+//the next function reverses the effects of the above animation, reverting to the
+// default assigned size once the mouse moves away from the button
+mouseHoverAnimation = () => {
+    anime({
+        targets: button,
+        width: '100%',
+        scale: {
+            delay: 2,
+            value: 1.0
+        },
+        duration: 3000,
+    })
+}
+
+button.addEventListener('mouseleave', mouseHoverAnimation)
+
+
+var buttonTop = document.getElementById('back-top')
+
+mouseHoverAnimation = () => {
+    anime({
+        targets: buttonTop,
+        width: '100%',
+        scale: {
+            delay: 2,
+            value: 1.5
+        },
+        duration: 3000,
+    })
+}
+
+buttonTop.addEventListener('mouseenter', mouseHoverAnimation)
+
+mouseHoverAnimation = () => {
+    anime({
+        targets: buttonTop,
+        width: '100%',
+        scale: {
+            delay: 2,
+            value: 1.0
+        },
+        duration: 3000,
+    })
+}
+
+buttonTop.addEventListener('mouseleave', mouseHoverAnimation)
