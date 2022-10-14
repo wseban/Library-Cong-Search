@@ -18,8 +18,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 25vw;
+    /* width: 100vw;
+    height: 25vw; */
 }
 
 .welcome h1 {
@@ -70,7 +70,7 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     width: 50vw;
-    color: yellow;
+    color: white;
 }
 
 a {
@@ -157,3 +157,5 @@ h2{
       display: none;
     }
   }
+
+
