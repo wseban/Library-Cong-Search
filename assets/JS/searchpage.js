@@ -91,3 +91,48 @@ function renderPlatforms() {
         .then(response => console.log(response))
         .catch(err => console.error(err));
 }
+
+
+
+function listShowLinks(event){
+    //
+    console.log(event)
+}
+function listMovieLinks(){
+    movieLink.setAttribute("onClick", renderPlatforms())
+
+}
+
+
+
+
+var inputClick = document.getElementById('search-bar')
+inputClick = document.addEventListener("click", renderInput);
+
+
+var inputEnter = document.getElementById("search-bar");
+inputEnter.addEventListener("keypress", function(event) {
+
+  if (event.key === "Enter") {
+    event.preventDefault();
+    renderInput()
+  }
+
+});
+
+
+var button = document.getElementById('search-button');
+
+mouseHoverAnimation = () => {
+    anime({
+        targets: button,
+        width: '100%',
+        scale: {
+            delay: 2,
+            value: 1.5
+        },
+        duration: 3000,
+    })
+}
+
+button.addEventListener('mouseover', mouseHoverAnimation)

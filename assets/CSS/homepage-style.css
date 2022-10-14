@@ -124,6 +124,7 @@ h2{
     border-width: 1px;
     border: solid;
     border-color: yellow;
+    display: flex;
 }
 
 .search-center{
@@ -175,7 +176,7 @@ h2{
 }
 
 @media screen and (max-width: 600px) {
-    #logo, p {
+    #logo, p, {
       display: none;
     }
   }
