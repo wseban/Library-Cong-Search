@@ -1,6 +1,6 @@
 * {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: prompt;
     box-sizing: border-box;
     padding: 0%;
 }
@@ -8,7 +8,7 @@
 .bg {
     /* padding-top: 40px;
     padding-left: 100px;     */
-    width: 100vw;
+    min-width: 100vw;
     height: 100vw;
     background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
 }
@@ -67,7 +67,6 @@ h1 {
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     width: 50vw;
     color: white;
@@ -104,23 +103,25 @@ h2{
 }
 
 #search-bar{
-    font-size: 20px;
+    font-size: 30px;
     color: blue;
-    max-width: 25%;
+    max-width: 40%;
 }
 
 #search-button{
+    border-radius: 5px;
+    max-height: 5px;
+    padding: 3px;
     font-size: 20px;
     color: white;
     background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
     cursor: pointer;
-    overflow: hidden;
     outline: none;
     max-width: 15%;
     padding-bottom: 2%;
-
+    border-width: 1px;
+    border: solid;
+    border-color: yellow;
 }
 
 .search-center{
@@ -150,6 +151,25 @@ h2{
 
 #char-display {
     text-align: center;
+}
+
+#back-top {
+    text-align: center;
+}
+#back-top button{
+    border-radius: 5px;
+    max-height: 5px;
+    padding: 3px;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    max-width: 15%;
+    padding-bottom: 2%;
+    border-width: 1px;
+    border: solid;
+    border-color: yellow;  
 }
 
 @media screen and (max-width: 600px) {

@@ -16,8 +16,6 @@ function renderInput () {
 
     var charName = words.join("%20")
 
-    console.log(charName);
-
 var getTitles = "https://api.disneyapi.dev/character?name=" + charName;
 
 fetch(getTitles)
@@ -32,55 +30,59 @@ fetch(getTitles)
     displayCharImage.setAttribute("src", image);
 
 
+  
+    
     for(var i = 0; i < shows.length; i++){
         var showList = document.createElement("ul")
         var showLink = document.createElement("a")
         showLink.textContent = shows[i]
-        showLink.setAttribute("href", listShowLinks())
         showList.appendChild(showLink)
         displayShowTitles.append(showList)
         
     }
+
     for(var i = 0; i < movies.length; i++){
         var movieList = document.createElement("ul")
         var movieLink = document.createElement("a")
         movieLink.textContent = movies[i]
-        movieLink.setAttribute("href", listMovieLinks())
         movieList.appendChild(movieLink)
         displayMovieTitles.append(movieList)
     }
-    //displayCharName.innerHTML = charName
-    //displayCharimage.innerHTML = image
-   // displayMovieTitles.innerHTML = movies
-    //displayShowTitles.innerHTML = shows
     
 }) 
 
 }
-// to be called after user clicks a title they want to see more info on.
-/* function renderPlatforms() {
-var getPlatforms = "https://api.watchmode.com/v1/autocomplete-search/?apiKey=4geqQK1CQGBP4icGVsqsLn9aqaMb0cjhUXs79A9V&search_field=name&search_value=" + titleName + "&search_type=1";
-} */
+
 function listShowLinks(){
+    showLink.setAttribute("onClick", renderPlatforms())
 
 }
 function listMovieLinks(){
+    movieLink.setAttribute("onClick", renderPlatforms())
 
 }
 
 
 
 
-var input = document.getElementById("search-bar");
+var inputClick = document.getElementById('search-bar')
+inputClick = document.addEventListener("click", renderInput);
 
-input.addEventListener("keypress", function(event) {
+
+var inputEnter = document.getElementById("search-bar");
+inputEnter.addEventListener("keypress", function(event) {
 
   if (event.key === "Enter") {
-
     event.preventDefault();
-
-    document.getElementById("search-button").click();
-
     renderInput()
   }
+
 });
+
+
+
+
+function renderPlatforms() {
+    console.log("hello")
+/* var getPlatforms = "https://api.watchmode.com/v1/autocomplete-search/?apiKey=4geqQK1CQGBP4icGVsqsLn9aqaMb0cjhUXs79A9V&search_field=name&search_value=" + titleName + "&search_type=1"; */
+}
