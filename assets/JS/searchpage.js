@@ -93,3 +93,19 @@ function renderPlatforms() {
     console.log("hello")
 /* var getPlatforms = "https://api.watchmode.com/v1/autocomplete-search/?apiKey=4geqQK1CQGBP4icGVsqsLn9aqaMb0cjhUXs79A9V&search_field=name&search_value=" + titleName + "&search_type=1"; */
 }
+
+var button = document.getElementById('search-button');
+
+mouseHoverAnimation = () => {
+    anime({
+        targets: button,
+        width: '100%',
+        scale: {
+            delay: 2,
+            value: 1.5
+        },
+        duration: 3000,
+    })
+}
+
+button.addEventListener('mouseover', mouseHoverAnimation)
