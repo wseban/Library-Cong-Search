@@ -6,6 +6,8 @@ var displayMovieTitles = document.getElementById('movies')
 var displayShowTitles = document.getElementById('shows')
 var displayCharImage = document.getElementById('char-image')
 
+
+
 function renderInput () {
     var input = document.getElementById('search-bar').value
     var words = input.split(" ");
@@ -41,6 +43,7 @@ fetch(getTitles)
         showLink.textContent = shows[i]
         showList.appendChild(showListItem)
         showListItem.appendChild(showLink)
+        showLink.setAttribute("id", i)
     }
 
     for(var i = 0; i < movies.length; i++){
@@ -50,7 +53,6 @@ fetch(getTitles)
         movieList.appendChild(movieListItem)
         movieListItem.appendChild(movieLink)
     }
-    
 }) 
 
 }
@@ -58,9 +60,9 @@ fetch(getTitles)
 
 
 
-function listShowLinks(){
-    //showLink.setAttribute("onClick", renderPlatforms())
-
+function listShowLinks(event){
+    //
+    console.log(event)
 }
 function listMovieLinks(){
     movieLink.setAttribute("onClick", renderPlatforms())
