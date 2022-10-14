@@ -5,31 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mickey n' Friends Finder</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
+    <link rel="stylesheet" href="/assets/CSS/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <link rel="stylesheet" href="./assets/CSS/homepage-style.css" />
   </head>
   <body>
     <header id="logo">
-      <img
-        src="assets/images/logo.png"
-        alt="mouse head with
-      tracks"
-      />
-    </header>
-
-    <main class="welcome">
+      <img src="assets/images/logo.png" alt="mouse head with tracks"/>
       <h1>Mickey n' Friends Finder!</h1>
-      <p>
-        Ever wondered what films and shows your favorite Disney Characters
-        appear in? And where to watch said films and shows? Look no further,
-        Mickey n' Friends Finder is here to provide all this information in one
-        place. Get started by typing in any Disney character!
-      </p>
-    </main>
+    </header>
+    
+
 
     <!-- Slideshow container -->
     <div class="slideshow-container">
@@ -46,11 +33,15 @@
       <div class="search-center">
         <input id="search-bar" />
         <br />
-        <button id="search-button" onclick="renderInput()">Search</button>
-      </div>
+        <button id="search-button">Search</button>
+     </div>
 
+    <div id="char-display">
       <div id="char-name"></div>
-      <br /><br /><br />
+      <div><img id="char-image" alt=""></div>
+    </div>
+
+
       <div class="columns custom-column">
         <div class="column">
           <h1>TV Shows</h1>
@@ -62,6 +53,15 @@
         </div>
       </div>
     </div>
+
+    <main class="welcome">
+      <p>
+        Ever wondered what films and shows your favorite Disney Characters
+        appear in? And where to watch said films and shows? Look no further,
+        Mickey n' Friends Finder is here to provide all this information in one
+        place. Get started by typing in any Disney character!
+      </p>
+    </main>
 
     <script src="./assets/JS/script.js"></script>
     <script src="./assets/JS/searchpage.js"></script>
