@@ -30,31 +30,36 @@ fetch(getTitles)
     displayCharImage.setAttribute("src", image);
 
 
-  
-    
+    var showList = document.createElement("ul")
+    displayShowTitles.append(showList)
+    var movieList = document.createElement("ul")
+    displayMovieTitles.append(movieList)
+
     for(var i = 0; i < shows.length; i++){
-        var showList = document.createElement("ul")
+        var showListItem = document.createElement("li")
         var showLink = document.createElement("a")
         showLink.textContent = shows[i]
-        showList.appendChild(showLink)
-        displayShowTitles.append(showList)
-        
+        showList.appendChild(showListItem)
+        showListItem.appendChild(showLink)
     }
 
     for(var i = 0; i < movies.length; i++){
-        var movieList = document.createElement("ul")
+        var movieListItem = document.createElement("li")
         var movieLink = document.createElement("a")
         movieLink.textContent = movies[i]
-        movieList.appendChild(movieLink)
-        displayMovieTitles.append(movieList)
+        movieList.appendChild(movieListItem)
+        movieListItem.appendChild(movieLink)
     }
     
 }) 
 
 }
 
+
+
+
 function listShowLinks(){
-    showLink.setAttribute("onClick", renderPlatforms())
+    //showLink.setAttribute("onClick", renderPlatforms())
 
 }
 function listMovieLinks(){
