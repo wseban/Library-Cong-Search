@@ -2,43 +2,53 @@
 
 ## Collaborators
 - William Seban
+    - [Github](https://github.com/wseban)
 - Anthony Manzione
+    - [Github](https://github.com/AJManzione)
 - Senay Gebrat
+    - [Github](https://github.com/senaygebrat)
 - Pengteda Cheng
+    - [Github](https://github.com/teedaa)
 
 ## Site Picture
-
-Deployed Link
-https://wseban.github.io/Mickey-n-Friends-Finder/
+![Site](./assets/images/functionality.gif)
+[Deployed Link](https://wseban.github.io/Mickey-n-Friends-Finder/)
 
 ## Usage
-Upon entrance, user is presented with a logo, the website title and a slideshow of Disney cartoons.  Scrolling down, the user is then prompted to input their favorite Disney cartoon character.  When the user hits 'search' they are presented with a list of all shows and movies that their Disney friend is present in.  The list, presented to the user, consists of links; when the user clicks on the desired movie or show they are presented with the appropriate streaming service that hosts that movie.
+Upon entrance, user is presented with a logo, the website title and a slideshow of Disney cartoons.  Scrolling down, the user is then prompted to input their favorite Disney cartoon character.  When the user hits 'search' they are presented with a list of all shows and movies that their Disney friend is present in. Clicking on a title will display IMBd information for said title.
 
-![Site](./assets/images/Screen%20Shot%202022-10-13%20at%209.29.39%20PM.png)
+
 
 ## Technologies Used
-- Watch Mode server API - An API that provides information on which streaming service are hosting different movies and shows.
+- OMDb API - API that presents IMDd information for movie and series titles.
 - Disney server API - An API that presents all disney character and where they appear (specifically used for all movies and shows designated character appears in)
-- Bulma.io - a third party API with pre designed elements advancing the range of style on a webpage.
 - Anime.js - a third party API that allows formatting and manipulation of elements.
-- JavaScript - Allows developer to make static webpages, dynamic and interactive.  For this exercise it was used to link the webpage to open weather server API, present the data received, dynamically create and append elements to present the data needed and engage with the specific user wants.  
-- HTML - Gives a basic static structure to the webpage.
-- CSS - Allows the developer to make the webpage a little more appealing.
-- Git - Git is what I used to work on my personal computer and pushing my work to GitHub.
-- GitHub - A cloud based repository that holds my saved code reserved for resetting my personal computer deployment.
+- ![Bulma](https://img.shields.io/badge/bulma-00D0B1?style=for-the-badge&logo=bulma&logoColor=white) 
+    - A third party API with pre designed elements advancing the range of style on a webpage.
+
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+     - Allows developer to make static webpages, dynamic and interactive.  For this exercise it was used to link the webpage to open weather server API, present the data received, dynamically create and append elements to present the data needed and engage with the specific user wants.  
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+    - Gives a basic static structure to the webpage.
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+    - Allows the developer to make the webpage a little more appealing.
+- ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+     - Git is what we used to work on our personal computers and pushing completed work to GitHub.
+- ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+     - A cloud based repository that holds saved code reserved for resetting  personal computer deployment.
+- ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+     - Code editing software
 
 ## Description
 
 The purpose of this project was to work as a cohesive unit to produce a fully functional and practical web application.  The web application was to interact with the user and provide desired output from server side APIs.
 
-## Installation
-
-NA
 
 ## Lessons Learned
 The most effective lessons learned for us were...
 1. Ensure to check response from our API as one of the first items.  We had to make a small pivot of direction for the project due to a faulty API.
 2. Communication with pulls and pushes to our repository and working around conflicts.
+3. Do not be afraid to ask teammates for help when stuck on code. Teamwork is crucial to making this application work properly.
 
 ## Code Snippets
 ```javascript
