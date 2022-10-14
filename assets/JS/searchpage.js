@@ -51,7 +51,13 @@ fetch(getTitles)
     displayCharName.innerHTML = charName;
     displayCharImage.setAttribute("src", image);
 
-
+    if(displayShowTitles.getElementsByTagName("ul")){
+        displayShowTitles.textContent = ""
+    }
+    if(displayMovieTitles.getElementsByTagName("ul")){
+        displayMovieTitles.textContent = ""
+    }
+    
     var showList = document.createElement("ul")
     displayShowTitles.append(showList)
     var movieList = document.createElement("ul")
