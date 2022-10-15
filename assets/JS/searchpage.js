@@ -14,7 +14,12 @@ var displayReleaseDate = document.getElementById('release')
 var displayRating = document.getElementById('rating')
 var displayPlot = document.getElementById('plot')
 
+var savedHistory = document.querySelector("#saved-history");
+var storage = [];
 
+displayLocalStorage();
+
+console.log(storage)
 // --------------------------------------  EVENT LISTENERS  ---------------------- ENTER AND CLICK  -------------------
 
 var inputClick = document.getElementById('search-button')
@@ -35,9 +40,25 @@ inputEnter.addEventListener("keypress", function(event) {
 // --------------------------------  FORMATTING USER INPUT  ---------------------------------------
 
 function renderInput () { // Function that is called on click and Enter
-
-    // Iterates through the inputed character name and Uppercases the First Letter and lower cases the rest + adds the required "%20" between spaces so that the API can be called properly - 
+ 
     var input = document.getElementById('search-bar').value
+
+
+// -----------------    LOCAL STORAGE  -----------------------
+    if (storage.includes(input) === false) {
+
+        if (storage.includes(input) === false) {
+            storage[storage.length] = input;
+            localStorage.setItem("history", JSON.stringify(storage));
+
+        }
+    }
+
+displayLocalStorage();
+
+
+// ---------------------- SPLIT --------------------------
+// Iterates through the inputed character name and Uppercases the First Letter and lower cases the rest + adds the required "%20" between spaces so that the API can be called properly -
     var words = input.split(" ");
    
     for (var i = 0; i < words.length; i++) {
@@ -46,7 +67,9 @@ function renderInput () { // Function that is called on click and Enter
 
     var charName = words.join("%20")
 
-//--------------------  DISNEY API  -----------------------------------------------
+
+
+//--------------------  DISNEY API  -----------------------------------------------------------
 var getTitles = "https://api.disneyapi.dev/character?name=" + charName;
 
 fetch(getTitles)
@@ -150,6 +173,46 @@ function renderInfo(event) {
         displayPoster.innerHTML = poster; 
         })
 }
+
+
+// Local Storage Section -------------------------
+
+function displayLocalStorage() {
+    var storedHistory = JSON.parse(localStorage.getItem("history"));
+    if (storedHistory !== null) {
+        storage = storedHistory;
+        addHistoryDisplay()
+    }
+}
+
+function addHistoryDisplay() {
+    savedHistory.innerHTML = "";
+    for (var i = 0; i < storage.length; i++){
+        var storageHistory = storage[i];
+
+        var historyButton = document.createElement("button");
+        historyButton.textContent = storageHistory;
+        
+        historyButton.addEventListener("click", function(event) {
+            var storageHistory = event.target.textContent;
+            console.log(storageHistory);
+            weather.getWeather(storageHistory);
+            weather.getWeeklyWeather(storageHistory);
+            });
+    }
+        historyButton.setAttribute("class","btn");
+        savedHistory.appendChild(historyButton);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 // -------------------- ANIME.JS ------------------------------------------------
