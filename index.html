@@ -17,7 +17,7 @@
   <body>
     <header id="logo">
       <img src="assets/images/logo.png" alt="image of mouse head with castle">
-      <h1>Mickey n' Friends Finder!</h1>
+      <h1 id="top">Mickey n' Friends Finder!</h1>
     </header>
 
 
@@ -49,18 +49,13 @@
         </div>
       </form>
         <br/>
-        <button id="search-button">Search
-        <a href="#char-display"></a>
+        <a href="#char-display"><button id="search-button">Search</a>
     </div>
 
-
-  
-
-
-
-
-
-    <button id="saved-history"></button>
+    <div id="display-history">
+      <h2>Search History:</h2>
+    <div id="saved-history"></div>
+    </div>
 
     <div id="char-display"> <!-- push users view to this part of page -->
       <div id="char-name"></div>
@@ -97,7 +92,7 @@
 
 </div>
 
-      <h3 id="back-top"><a href="#logo"><button>Back to Search</a></h3>
+      <h3 id="back-top"><a href="#top"><button>Back to Search</a></h3>
 
       <div id="streamed-movies"></div>
    <div id="streamed-shows"></div> 
