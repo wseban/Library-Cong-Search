@@ -159,7 +159,7 @@ function renderInfo(event) {
 
 var button = document.getElementById('search-button');
 
-mouseHoverAnimation = () => {
+mouseHover1Animation = () => {
     anime({
         targets: button,
         width: '100%',
@@ -171,28 +171,24 @@ mouseHoverAnimation = () => {
     })
 }
 
-button.addEventListener('mouseenter', mouseHoverAnimation)
 
 //the next function reverses the effects of the above animation, reverting to the
 // default assigned size once the mouse moves away from the button
-mouseHoverAnimation = () => {
+mouseOut1Animation = () => {
     anime({
         targets: button,
-        width: '100%',
+        width: '50%',
         scale: {
             delay: 2,
-            value: .75
+            value: 1.0
         },
         duration: 3000,
     })
 }
 
-button.addEventListener('mouseleave', mouseHoverAnimation)
-
-
 var buttonTop = document.getElementById('back-top')
 
-mouseHoverAnimation = () => {
+mouseHover2Animation = () => {
     anime({
         targets: buttonTop,
         width: '100%',
@@ -204,9 +200,7 @@ mouseHoverAnimation = () => {
     })
 }
 
-buttonTop.addEventListener('mouseenter', mouseHoverAnimation)
-
-mouseHoverAnimation = () => {
+mouseOut2Animation = () => {
     anime({
         targets: buttonTop,
         width: '100%',
@@ -218,5 +212,7 @@ mouseHoverAnimation = () => {
     })
 }
 
-buttonTop.addEventListener('mouseleave', mouseHoverAnimation)
-
+button.addEventListener('mouseenter', mouseHover1Animation)
+button.addEventListener('mouseleave', mouseOut1Animation)
+buttonTop.addEventListener('mouseenter', mouseHover2Animation)
+buttonTop.addEventListener('mouseleave', mouseOut2Animation)
