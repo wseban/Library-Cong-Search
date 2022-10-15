@@ -15,9 +15,6 @@ var displayRating = document.getElementById('rating')
 var displayPlot = document.getElementById('plot')
 
 
-
-
-
 // --------------------------------------  EVENT LISTENERS  ---------------------- ENTER AND CLICK  -------------------
 
 var inputClick = document.getElementById('search-button')
@@ -110,8 +107,6 @@ fetch(getTitles)
 
 }
 
-
-
 // --------------------------------  OMDB API  -------------------------------------
 
 
@@ -149,15 +144,15 @@ function renderInfo(event) {
         
 
         displayTitle.innerHTML = title;
-        displayReleaseDate.innerHTML = releaseDate;
-        displayRating.innerHTML = rating;
-        displayPlot.innerHTML = plot;
+        displayReleaseDate.innerHTML = "Released: " + releaseDate;
+        displayRating.innerHTML = "Rating:  " + rating;
+        displayPlot.innerHTML = plot ;
         displayPoster.innerHTML = poster; 
         })
-
-
 }
 
+
+// -------------------- ANIME.JS ------------------------------------------------
 //getting the 'search-button' element by id allows you to target which button will animate
 //for the user when they interact with it. when the mouse hovers aboves the button it will
 //increase the width at the speed listed. 
@@ -186,7 +181,7 @@ mouseHoverAnimation = () => {
         width: '100%',
         scale: {
             delay: 2,
-            value: 1.0
+            value: .75
         },
         duration: 3000,
     })
@@ -224,3 +219,4 @@ mouseHoverAnimation = () => {
 }
 
 buttonTop.addEventListener('mouseleave', mouseHoverAnimation)
+

@@ -127,12 +127,12 @@ h2{
     border: solid;
     border-color: yellow;
     display: flex;
+    justify-content: center;
 }
 
 .search-center{
     margin-top: 30px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
@@ -161,6 +161,7 @@ h2{
 #back-top {
     text-align: center;
 }
+
 #back-top button{
     border-radius: 5px;
     max-height: 5px;
@@ -174,7 +175,7 @@ h2{
     padding-bottom: 2%;
     border-width: 1px;
     border: solid;
-    border-color: yellow;  
+    border-color: yellow;
 }
 
 #modal {
@@ -183,6 +184,10 @@ h2{
     flex-direction: column;
 }
 
+#title {
+    font-size: 48px;
+    color: white;
+}
 
 #modal img {
     max-width: 50vw;
@@ -194,5 +199,23 @@ h2{
       display: none;
     }
   }
+
+#release {
+    color: white;
+    font-size: 18px;
+}
+
+#rating {
+    font-size: 18px;
+    color: white;
+}
+
+#plot {
+    padding-bottom: 2vw;
+    font-size: 18px;
+    color: white;
+}
+
+
 
 
