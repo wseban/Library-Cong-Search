@@ -13,6 +13,8 @@ var posterImage = document.getElementById('poster-img')
 var displayReleaseDate = document.getElementById('release')
 var displayRating = document.getElementById('rating')
 var displayPlot = document.getElementById('plot')
+var modalOpen = document.querySelector(".modal")
+var modalClose = document.querySelector(".modal-close")
 
 var savedHistory = document.querySelector("#saved-history");
 var storage = [];
@@ -166,7 +168,7 @@ function renderInfo(event) {
         var poster = data['Poster'];
         posterImage.setAttribute("src", poster); 
         
-        
+        modalOpen.setAttribute("class", "modal is-active")
         
 
         displayTitle.innerHTML = title;
@@ -174,6 +176,11 @@ function renderInfo(event) {
         displayRating.innerHTML = "Rating:  " + rating;
         displayPlot.innerHTML = plot ;
         displayPoster.innerHTML = poster; 
+
+        modalClose.addEventListener("click", function(){
+            modalOpen.removeAttribute("class")
+        })
+
         })
 }
 
