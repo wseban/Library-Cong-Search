@@ -94,14 +94,15 @@ autocomplete(document.getElementById("search-bar"), characterArray);
 
 
 
+// click logo to refresh page
 
+var refreshButton = document.querySelector('.logo');
 
+function refreshPage() {
+  window.location.reload();
+}
 
-
-
-
-
-
+refreshButton.addEventListener ('img', refreshPage)
 
 //Slideshow Functionality 
 var slideIndex = 0;
