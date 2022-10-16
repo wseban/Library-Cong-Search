@@ -90,7 +90,7 @@ fetch(getTitles)
 ```
 ## Credits
 
-NA
+N/A
 
 ## License
 Please refer to the LICENSE in the Repo.
