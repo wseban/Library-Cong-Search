@@ -25,21 +25,12 @@ displayLocalStorage();
 var inputClick = document.getElementById('search-button')
 inputClick.addEventListener("click", renderInput);
 
-/*
-var inputEnter = document.getElementById("search-bar");
-inputEnter.addEventListener("keypress", function(event) {
 
-  if (event.key === "Enter") {
-    event.preventDefault();
-    renderInput()
-  }
-
-});
-*/
 // --------------------------------  FORMATTING USER INPUT  ---------------------------------------
 
 function renderInput(event) { // Function that is called on click and Enter
  var input;
+
 if(event.target.innerText === "Search"){
         input = document.getElementById('search-bar').value
 }
@@ -49,11 +40,7 @@ if(event.target.innerText !== "Search"){
 
 // -----------------    LOCAL STORAGE  -----------------------
   
-        if (storage.includes(input) === false) {
-            storage[storage.length] = input;
-            localStorage.setItem("history", JSON.stringify(storage));
-
-        }
+       
     
 
 
@@ -77,7 +64,21 @@ var getTitles = "https://api.disneyapi.dev/character?name=" + charName;
 fetch(getTitles)
 .then(response => response.json())
 .then(data => {
+    console.log(data)
+    if(data.count === 0){
+        var modalClose = document.getElementById("modal-close-js")
+        modalOpen.setAttribute("class", "modal is-active")
+        displayTitle.textContent = "Sorry you entered an invalid character"
+        modalClose.addEventListener("click", function(){
+            modalOpen.setAttribute("class", "modal")}
+        )
+    }
     
+    if (storage.includes(input) === false && data.count !== 0) {
+        storage[storage.length] = input;
+        localStorage.setItem("history", JSON.stringify(storage));
+
+    }
     var movies = data['data'][0]['films'] // Retrieves the data (Films) stores it in the variable
     var shows = data['data'][0]['tvShows'] // Retrieves the data (TV Shows) stores it in the variable
     var charName = data['data'][0]['name'] // Retrieves the data (Character Name) stores it in the variable
