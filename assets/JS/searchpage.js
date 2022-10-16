@@ -26,7 +26,7 @@ console.log(storage)
 var inputClick = document.getElementById('search-button')
 inputClick.addEventListener("click", renderInput);
 
-
+/*
 var inputEnter = document.getElementById("search-bar");
 inputEnter.addEventListener("keypress", function(event) {
 
@@ -36,7 +36,7 @@ inputEnter.addEventListener("keypress", function(event) {
   }
 
 });
-
+*/
 // --------------------------------  FORMATTING USER INPUT  ---------------------------------------
 
 function renderInput(event) { // Function that is called on click and Enter
@@ -190,7 +190,7 @@ function displayLocalStorage() {
 
 function addHistoryDisplay() {
     //savedHistory.innerHTML = "";
-    for (var i = 0; i < 4; i++){
+    for (var i = 0; i < 5; i++){
         var history = storage[i];
 
         var historyButton = document.createElement("button");
