@@ -77,7 +77,15 @@ var getTitles = "https://api.disneyapi.dev/character?name=" + charName;
 fetch(getTitles)
 .then(response => response.json())
 .then(data => {
-    
+    console.log(data.status)
+    if(data.status !== 200){
+        var modalClose = document.getElementById("modal-close-js")
+        modalOpen.setAttribute("class", "modal is-active")
+        displayTitle.textContent = "Sorry you entered an invalid character"
+        modalClose.addEventListener("click", function(){
+            modalOpen.setAttribute("class", "modal")}
+        )
+    }
     var movies = data['data'][0]['films'] // Retrieves the data (Films) stores it in the variable
     var shows = data['data'][0]['tvShows'] // Retrieves the data (TV Shows) stores it in the variable
     var charName = data['data'][0]['name'] // Retrieves the data (Character Name) stores it in the variable
