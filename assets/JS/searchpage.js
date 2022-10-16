@@ -25,17 +25,7 @@ displayLocalStorage();
 var inputClick = document.getElementById('search-button')
 inputClick.addEventListener("click", renderInput);
 
-/*
-var inputEnter = document.getElementById("search-bar");
-inputEnter.addEventListener("keypress", function(event) {
 
-  if (event.key === "Enter") {
-    event.preventDefault();
-    renderInput()
-  }
-
-});
-*/
 // --------------------------------  FORMATTING USER INPUT  ---------------------------------------
 
 function renderInput(event) { // Function that is called on click and Enter
