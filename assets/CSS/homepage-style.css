@@ -231,15 +231,16 @@ h2{
 #saved-history button{
     border-radius: 5px;
     max-height: 3vh;
-    padding: 1px;
+    padding-right: 10px;
     font-size: 1vw;
     color: white;
     background-color: transparent;
     cursor: pointer;
     outline: none;
     max-width: 20%;
-    border-width: 1px;
-    border: solid;
-    border-color: yellow;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    
 
 }
