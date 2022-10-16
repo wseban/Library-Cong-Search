@@ -38,13 +38,6 @@ if(event.target.innerText !== "Search"){
     input = event.target.innerText
 }
 
-// -----------------    LOCAL STORAGE  -----------------------
-  
-       
-    
-
-
-
 
 // ---------------------- SPLIT --------------------------
 // Iterates through the inputed character name and Uppercases the First Letter and lower cases the rest + adds the required "%20" between spaces so that the API can be called properly -
@@ -55,8 +48,6 @@ if(event.target.innerText !== "Search"){
     }
 
     var charName = words.join("%20")
-
-
 
 //--------------------  DISNEY API  -----------------------------------------------------------
 var getTitles = "https://api.disneyapi.dev/character?name=" + charName;
@@ -179,12 +170,8 @@ function renderInfo(event) {
         displayRating.innerHTML = "Rating:  " + rating;
         displayPlot.innerHTML = plot ;
         displayPoster.innerHTML = poster; 
-
-        
-
         })
 }
-
 
 // Local Storage Section -------------------------
 
@@ -212,20 +199,6 @@ function addHistoryDisplay() {
     }
 }
        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 // -------------------- ANIME.JS ------------------------------------------------
 //getting the 'search-button' element by id allows you to target which button will animate
 //for the user when they interact with it. when the mouse hovers aboves the button it will

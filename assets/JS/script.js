@@ -76,33 +76,6 @@ autocomplete(document.getElementById("search-bar"), characterArray);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Slideshow Functionality 
 var slideIndex = 0;
 carousel();
