@@ -1,5 +1,4 @@
 // function that gets called when user inputs their favortie character into the search bar
-
 var displayCharName = document.getElementById('char-name')
 var displayMovieTitles = document.getElementById('movies')
 var displayShowTitles = document.getElementById('shows')
@@ -13,15 +12,13 @@ var posterImage = document.getElementById('poster-img')
 var displayReleaseDate = document.getElementById('release')
 var displayRating = document.getElementById('rating')
 var displayPlot = document.getElementById('plot')
-var modalOpen = document.querySelector(".modal")
-var modalClose = document.querySelector(".modal-close")
+
+var modalOpen = document.getElementById("modal-open-js")
 
 var savedHistory = document.querySelector("#saved-history");
 var storage = [];
 
 displayLocalStorage();
-
-console.log(storage)
 
 // --------------------------------------  EVENT LISTENERS  ---------------------- ENTER AND CLICK  -------------------
 
@@ -168,7 +165,12 @@ function renderInfo(event) {
         var poster = data['Poster'];
         posterImage.setAttribute("src", poster); 
         
+
+        var modalClose = document.getElementById("modal-close-js")
         modalOpen.setAttribute("class", "modal is-active")
+        modalClose.addEventListener("click", function(){
+            modalOpen.setAttribute("class", "modal")
+        })
         
 
         displayTitle.innerHTML = title;
@@ -177,9 +179,7 @@ function renderInfo(event) {
         displayPlot.innerHTML = plot ;
         displayPoster.innerHTML = poster; 
 
-        modalClose.addEventListener("click", function(){
-            modalOpen.removeAttribute("class")
-        })
+        
 
         })
 }
@@ -208,8 +208,8 @@ function addHistoryDisplay() {
             //var storageHistory = event.target.innerText;
             //console.log(storageHistory);
 
-            };
     }
+}
        
         
 
