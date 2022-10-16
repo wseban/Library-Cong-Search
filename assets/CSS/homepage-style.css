@@ -139,6 +139,10 @@ h2{
 
 }
 
+strong {
+    color: yellow;
+}
+
 .custom-column { 
     text-align: center;
 }
