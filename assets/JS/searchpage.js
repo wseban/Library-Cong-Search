@@ -21,15 +21,12 @@ displayLocalStorage();
 
 console.log(storage)
 
-
-
-
 // --------------------------------------  EVENT LISTENERS  ---------------------- ENTER AND CLICK  -------------------
 
 var inputClick = document.getElementById('search-button')
 inputClick.addEventListener("click", renderInput);
 
-
+/*
 var inputEnter = document.getElementById("search-bar");
 inputEnter.addEventListener("keypress", function(event) {
 
@@ -39,26 +36,28 @@ inputEnter.addEventListener("keypress", function(event) {
   }
 
 });
-
-
+*/
 // --------------------------------  FORMATTING USER INPUT  ---------------------------------------
 
-function renderInput () { // Function that is called on click and Enter
- 
-    var input = document.getElementById('search-bar').value
-
+function renderInput(event) { // Function that is called on click and Enter
+ var input;
+if(event.target.innerText === "Search"){
+        input = document.getElementById('search-bar').value
+}
+if(event.target.innerText !== "Search"){
+    input = event.target.innerText
+}
 
 // -----------------    LOCAL STORAGE  -----------------------
-    if (storage.includes(input) === false) {
-
+  
         if (storage.includes(input) === false) {
             storage[storage.length] = input;
             localStorage.setItem("history", JSON.stringify(storage));
 
         }
-    }
+    
 
-displayLocalStorage();
+
 
 
 // ---------------------- SPLIT --------------------------
@@ -141,12 +140,12 @@ function renderInfo(event) {
     var userValue = event.target.innerText;
 
     var splitUserValue = userValue.split(" ");
-   
+
     for (var i = 0; i < splitUserValue.length; i++) {
         splitUserValue[i] = splitUserValue[i][0].toUpperCase() + splitUserValue[i].substr(1);
     }
 
-    var joinUserValue = splitUserValue.join("%20")
+    var joinUserValue = splitUserValue.join("%20");
 
     console.log(joinUserValue);
 
@@ -190,23 +189,23 @@ function displayLocalStorage() {
 }
 
 function addHistoryDisplay() {
-    savedHistory.innerHTML = "";
-    for (var i = 0; i < storage.length; i++){
-        var storageHistory = storage[i];
+    //savedHistory.innerHTML = "";
+    for (var i = 0; i < 5; i++){
+        var history = storage[i];
 
         var historyButton = document.createElement("button");
-        historyButton.textContent = storageHistory;
-        
-        historyButton.addEventListener("click", function(event) {
-            var storageHistory = event.target.textContent;
-            console.log(storageHistory);
-            weather.getWeather(storageHistory);
-            weather.getWeeklyWeather(storageHistory);
-            });
-    }
-        historyButton.setAttribute("class","btn");
+        historyButton.textContent = history;
         savedHistory.appendChild(historyButton);
-}
+        historyButton.setAttribute("class","btn");
+        historyButton.addEventListener("click", renderInput) //{
+            //var storageHistory = event.target.innerText;
+            //console.log(storageHistory);
+
+            };
+    }
+       
+        
+
 
 
 
