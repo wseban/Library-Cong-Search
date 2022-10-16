@@ -161,6 +161,10 @@ h2{
     align-items: center;
 }
 
+strong {
+    color: yellow;
+}
+
 .custom-column { 
     text-align: center;
 }
