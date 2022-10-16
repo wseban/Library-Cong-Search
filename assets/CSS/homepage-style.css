@@ -103,6 +103,7 @@ h2{
     color: blue;
     max-width: 60%;
 }
+
 /*  -----------------------------------------  BUTTONS  ----------------------------- */
 #search-button{
     font-family: prompt;
@@ -242,5 +243,3 @@ strong {
     justify-content: center;
     text-decoration: underline;
 }
-
-

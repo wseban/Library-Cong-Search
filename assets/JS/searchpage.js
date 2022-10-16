@@ -5,16 +5,13 @@ var displayShowTitles = document.getElementById('shows')
 var displayCharImage = document.getElementById('char-image')
 var displayStreamedMovies = document.getElementById('streamed-movies')
 var displayStreamedShows = document.getElementById('streamed-shows')
-
 var displayTitle = document.getElementById('title')
 var displayPoster = document.getElementById('poster')
 var posterImage = document.getElementById('poster-img')
 var displayReleaseDate = document.getElementById('release')
 var displayRating = document.getElementById('rating')
 var displayPlot = document.getElementById('plot')
-
 var modalOpen = document.getElementById("modal-open-js")
-
 var savedHistory = document.querySelector("#saved-history");
 var storage = [];
 
@@ -37,7 +34,6 @@ if(event.target.innerText === "Search"){
 if(event.target.innerText !== "Search"){
     input = event.target.innerText
 }
-
 
 // ---------------------- SPLIT --------------------------
 // Iterates through the inputed character name and Uppercases the First Letter and lower cases the rest + adds the required "%20" between spaces so that the API can be called properly -
@@ -92,7 +88,6 @@ fetch(getTitles)
     var movieList = document.createElement("ul")
     displayMovieTitles.append(movieList)
 
-
 // -------------------------   SHOWS  -----------------------------   
     // Appends ALL List items (As much data that is availible) to be contained within the UL of Show Titles
     for(var i = 0; i < shows.length; i++){
@@ -118,14 +113,10 @@ fetch(getTitles)
         movieLink.setAttribute("id", ten + j);
         var listenMovieLink = document.getElementById(ten + j); 
         listenMovieLink.addEventListener("click", renderInfo);
-    }
-    
+    }  
 }) 
-
 }
-
 // --------------------------------  OMDB API  -------------------------------------
-
 
 function renderInfo(event) {
     var userValue = event.target.innerText;
@@ -139,7 +130,6 @@ function renderInfo(event) {
     var joinUserValue = splitUserValue.join("%20");
 
     console.log(joinUserValue);
-
 
       fetch('http://www.omdbapi.com/?t=' + joinUserValue + '&apikey=61416bd7')
         .then(response => response.json())
@@ -164,7 +154,6 @@ function renderInfo(event) {
             modalOpen.setAttribute("class", "modal")
         })
         
-
         displayTitle.innerHTML = title;
         displayReleaseDate.innerHTML = "Released: " + releaseDate;
         displayRating.innerHTML = "Rating:  " + rating;
@@ -227,7 +216,7 @@ mouseOut1Animation = () => {
         width: '50%',
         scale: {
             delay: 2,
-            value: 1.0
+            value: 1.0 
         },
         duration: 3000,
     })
