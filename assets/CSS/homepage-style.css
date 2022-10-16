@@ -103,23 +103,55 @@ h2{
     color: blue;
     max-width: 60%;
 }
-
+/*  -----------------------------------------  BUTTONS  ----------------------------- */
 #search-button{
+    font-family: prompt;
     border-radius: 5px;
-    max-height: 3vh;
-    padding: 3px;
-    font-size: 2vw;
+    max-height: 1vh;
+    padding: 4px;
+    font-size: 1.5vw;
     color: white;
     background-color: transparent;
     cursor: pointer;
     outline: none;
-    max-width: 15%;
+    max-width: 6%;
     padding-bottom: 2%;
     border-width: 1px;
     border: solid;
     border-color: yellow;
+}
+
+#back-top button{
+    font-family: prompt;
+    border-radius: 5px;
+    max-height: 5vh;
+    padding: 3px;
+    font-size: 1.5vw;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    max-width: 25%;
+    padding-bottom: 2%;
+    border-width: 1px;
+    border: solid;
+    border-color: yellow;
+}
+
+#saved-history button{
+    font-family: prompt;
+    border-radius: 5px;
+    max-height: 3vh;
+    padding-right: 10px;
+    font-size: 1vw;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    max-width: 20%;
+    border: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .search-center{
@@ -153,21 +185,6 @@ h2{
     text-align: center;
 }
 
-#back-top button{
-    border-radius: 5px;
-    max-height: 4.5vh;
-    padding: 3px;
-    font-size: 2vw;
-    color: white;
-    background-color: transparent;
-    cursor: pointer;
-    outline: none;
-    max-width: 20%;
-    padding-bottom: 2%;
-    border-width: 1px;
-    border: solid;
-    border-color: yellow;
-}
 
 #modal {
     display: flex;
@@ -212,22 +229,14 @@ h2{
     text-align: center;
 }
 
+#search-barautocomplete-list{
+    padding-top: 10px;
+    margin-left: 140px;
+}
 #saved-history {
     display: flex;
     justify-content: center;
+    text-decoration: underline;
 }
 
-#saved-history button{
-    border-radius: 5px;
-    max-height: 3vh;
-    padding-right: 10px;
-    font-size: 1vw;
-    color: white;
-    background-color: transparent;
-    cursor: pointer;
-    outline: none;
-    max-width: 20%;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-}
+
