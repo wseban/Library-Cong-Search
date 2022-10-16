@@ -8,8 +8,6 @@
 }
 
 .bg {
-    /* padding-top: 40px;
-    padding-left: 100px;     */
     min-width: 100vw;
     min-height: 100vw;
     background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
@@ -20,8 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: 100vw;
-    height: 25vw; */
+
 }
 
 .welcome h1 {
@@ -42,7 +39,6 @@ body {
 .slideshow-container {
   display: flex;
   justify-content: center;
-  
 }
 
 .images{
@@ -55,9 +51,6 @@ body {
     height: 30vw;
 }
 
-
-/*//////////////////
-*/
 @font-face {
     src: url(./NewWaltDisneyUi-8YdA.ttf);
     font-family: walter;
@@ -79,7 +72,6 @@ a {
     color: white;
 }
 
-
 /* HEADER */
 #logo { 
     display: flex;
@@ -90,7 +82,6 @@ a {
 #logo h1 {
     text-align: center;
 }
- 
 
 #logo img{
     width: 6vw;
@@ -136,7 +127,6 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .custom-column { 
@@ -153,7 +143,6 @@ h2{
 #char-image {
     max-width: 50vw;
     max-height: 50vh;
-    /* align-items: center; */
 }
 
 #char-display {
@@ -241,6 +230,4 @@ h2{
     border: none;
     display: flex;
     justify-content: space-between;
-    
-
 }
