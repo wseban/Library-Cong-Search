@@ -216,7 +216,7 @@ mouseOut1Animation = () => {
         width: '50%',
         scale: {
             delay: 2,
-            value: 1.0 
+            value: 1.0
         },
         duration: 3000,
     })
