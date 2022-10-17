@@ -123,7 +123,7 @@ h2{
 }
 
 #back-top button{
-    font-family: prompt;
+    /* font-family: prompt; */
     border-radius: 5px;
     max-height: 5vh;
     padding: 3px;
@@ -243,3 +243,36 @@ strong {
     justify-content: center;
     text-decoration: underline;
 }
+
+
+/* Autocomplete Styling */
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+  }
+  
+  input {
+    font-size: 16px;
+  }
+  
+  input[type=submit] {
+    cursor: pointer;
+  }
+  
+  .autocomplete-items {
+    z-index: 99;
+  }
+  
+  .autocomplete-items div {
+    cursor: pointer;
+  }
+  
+
+  
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+    max-width: 20vw;
+  }
