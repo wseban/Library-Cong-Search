@@ -1,0 +1,91 @@
+@font-face {
+    src: url(./NewWaltDisneyUi-8YdA.ttf);
+    font-family: walter;
+}
+
+* {
+    color: white;
+    font-family: prompt;
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0;
+}
+
+.images {
+    width: 50vw;
+    height: 30vw;
+}
+
+ul li {
+    font-size: 30px;
+    list-style: none;
+    text-align: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: beige;
+}
+
+ul li:hover {
+    cursor: pointer;
+    color: yellow;
+}
+
+/*  -----------------------------------------  BUTTONS  ----------------------------- */
+#search-button{
+    font-family: prompt;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid yellow;
+}
+#back-top button{
+    border-radius: 5px;
+    max-height: 5vh;
+    padding: 3px;
+    font-size: 1.5vw;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    max-width: 25%;
+    padding-bottom: 2%;
+    border-width: 1px;
+    border: solid;
+    border-color: yellow;
+}
+
+#saved-history button{
+    color: gray;
+    cursor: pointer;
+}
+
+#saved-history button:hover {
+    color: rgb(255, 250, 250);
+}
+
+
+
+#char-image, #poster-image {
+    max-width: 50vw;
+    max-height: 50vh;
+}
+
+#char-display {
+    text-align: center;
+}
+
+.title {
+    font-family: walter;
+    font-size: 48px;
+    color: yellow;
+}
+
+#char-name {
+    font-family: walter;
+    color: yellow;
+    font-size: 60px;
+}

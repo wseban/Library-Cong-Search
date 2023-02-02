@@ -1,3 +1,5 @@
+
+
 // function that gets called when user inputs their favortie character into the search bar
 var displayCharName = document.getElementById('char-name')
 var displayMovieTitles = document.getElementById('movies')
@@ -6,12 +8,10 @@ var displayCharImage = document.getElementById('char-image')
 var displayStreamedMovies = document.getElementById('streamed-movies')
 var displayStreamedShows = document.getElementById('streamed-shows')
 var displayTitle = document.getElementById('title')
-var displayPoster = document.getElementById('poster')
-var posterImage = document.getElementById('poster-img')
+var displayPosterImage = document.getElementById('poster-image')
 var displayReleaseDate = document.getElementById('release')
 var displayRating = document.getElementById('rating')
 var displayPlot = document.getElementById('plot')
-var modalOpen = document.getElementById("modal-open-js")
 var savedHistory = document.querySelector("#saved-history");
 var storage = [];
 
@@ -27,6 +27,8 @@ inputClick.addEventListener("click", renderInput);
 
 function renderInput(event) { // Function that is called on click and Enter
  var input;
+
+ event.preventDefault();
 
 if(event.target.innerText === "Search"){
         input = document.getElementById('search-bar').value
@@ -51,7 +53,7 @@ var getTitles = "https://api.disneyapi.dev/character?name=" + charName;
 fetch(getTitles)
 .then(response => response.json())
 .then(data => {
-    console.log(data)
+
     if(data.count === 0){
         var modalClose = document.getElementById("modal-close-js")
         modalOpen.setAttribute("class", "modal is-active")
@@ -119,7 +121,15 @@ fetch(getTitles)
 // --------------------------------  OMDB API  -------------------------------------
 
 function renderInfo(event) {
+    event.preventDefault();
     var userValue = event.target.innerText;
+
+    var clickedId = event.target.id;
+    var clickElement = document.getElementById(clickedId);
+
+    clickElement.setAttribute("href", "#");
+    clickElement.setAttribute("data-bs-toggle", "modal")
+    clickElement.setAttribute("data-bs-target", "#modal")
 
     var splitUserValue = userValue.split(" ");
 
@@ -129,36 +139,23 @@ function renderInfo(event) {
 
     var joinUserValue = splitUserValue.join("%20");
 
-    console.log(joinUserValue);
-
       fetch('http://www.omdbapi.com/?t=' + joinUserValue + '&apikey=61416bd7')
         .then(response => response.json())
         .then(data => {
-
-        console.log(data)
         
         var title = data['Title'];
         var releaseDate = data['Released'];
         var rating = data['imdbRating'];
         var plot = data['Plot'];
-        
-        console.log(plot);
-        console.log(rating);
         var poster = data['Poster'];
-        posterImage.setAttribute("src", poster); 
         
-
-        var modalClose = document.getElementById("modal-close-js")
-        modalOpen.setAttribute("class", "modal is-active")
-        modalClose.addEventListener("click", function(){
-            modalOpen.setAttribute("class", "modal")
-        })
         
         displayTitle.innerHTML = title;
         displayReleaseDate.innerHTML = "Released: " + releaseDate;
         displayRating.innerHTML = "Rating:  " + rating;
-        displayPlot.innerHTML = plot ;
-        displayPoster.innerHTML = poster; 
+        displayPlot.innerHTML = plot;
+        displayPosterImage.setAttribute("src", poster); 
+   
         })
 }
 
@@ -201,9 +198,9 @@ mouseHover1Animation = () => {
         width: '100%',
         scale: {
             delay: 2,
-            value: 1.5
+            value: 1.0
         },
-        duration: 3000,
+        duration: 6000,
     })
 }
 
